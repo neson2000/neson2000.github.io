@@ -1,334 +1,318 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!doctype html>
+<html lang="zh-CN">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>宁波｜个人品牌</title>
+  <meta name="description" content="宁波：影视项目宣发 / 品牌合作 / 整合传播。精选项目与合作方式。" />
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    :root{
+      --bg:#0b0d10;
+      --card:#101319;
+      --text:#eef2f7;
+      --muted:#aab3c2;
+      --line:rgba(255,255,255,.10);
+      --soft:rgba(255,255,255,.06);
+      --accent:#8fb2ff;
+      --shadow: 0 12px 40px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:980px;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f6f7f9;
+        --card:#ffffff;
+        --text:#0b0d10;
+        --muted:#5a6577;
+        --line:rgba(10,15,20,.12);
+        --soft:rgba(10,15,20,.06);
+        --accent:#2a64ff;
+        --shadow: 0 10px 30px rgba(10,15,20,.08);
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+      background:
+        radial-gradient(900px 600px at 20% 0%, rgba(143,178,255,.22), transparent 55%),
+        radial-gradient(800px 500px at 95% 18%, rgba(255,255,255,.08), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      letter-spacing:.2px;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:26px 18px 70px}
+    .topbar{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+      position:sticky;top:0;z-index:10;
+      backdrop-filter: blur(10px);
+      background: color-mix(in srgb, var(--bg) 86%, transparent);
+      border-bottom:1px solid var(--soft);
+      padding:12px 18px;
+      margin: -26px -18px 0;
+    }
+    .brand{display:flex;align-items:center;gap:10px}
+    .dot{width:10px;height:10px;border-radius:99px;background:var(--accent);box-shadow:0 0 0 6px color-mix(in srgb, var(--accent) 20%, transparent)}
+    .name{font-weight:700}
+    .nav{display:flex;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:13px}
+    .nav a{padding:8px 10px;border-radius:999px;border:1px solid transparent}
+    .nav a:hover{border-color:var(--line);background:color-mix(in srgb, var(--card) 65%, transparent)}
+    .hero{padding:40px 0 24px}
+    .kicker{color:var(--muted);font-size:13px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .pill{border:1px solid var(--line);background:color-mix(in srgb, var(--card) 78%, transparent);padding:7px 10px;border-radius:999px}
+    h1{margin:14px 0 12px;font-size:44px;line-height:1.08}
+    .lead{margin:0;color:var(--muted);max-width:68ch;line-height:1.75;font-size:15.5px}
+    .cta{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:11px 14px;border-radius:14px;
+      border:1px solid var(--line);
+      background:color-mix(in srgb, var(--card) 70%, transparent);
+      box-shadow:none;
+      font-size:14px;
+    }
+    .btn.primary{
+      border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+      background: linear-gradient(180deg,
+        color-mix(in srgb, var(--accent) 18%, transparent),
+        color-mix(in srgb, var(--card) 75%, transparent)
+      );
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+    .card{
+      grid-column:span 12;
+      background:color-mix(in srgb, var(--card) 86%, transparent);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:16px;
+      box-shadow:var(--shadow);
+    }
+    @media(min-width:860px){
+      .span6{grid-column:span 6}
+      .span4{grid-column:span 4}
+      .span8{grid-column:span 8}
+    }
+    .card h2{margin:0 0 10px;font-size:14px;color:var(--muted);font-weight:650;letter-spacing:.6px;text-transform:uppercase}
+    .big{
+      font-size:16px;line-height:1.7;margin:0;color:var(--text);
+    }
+    .muted{color:var(--muted);line-height:1.7;margin:0}
+    .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:7px 10px;border-radius:999px;background:color-mix(in srgb, var(--card) 75%, transparent)}
+    .list{margin-top:10px;display:flex;flex-direction:column;gap:10px}
+    .item{
+      padding:12px;border:1px solid var(--line);border-radius:16px;
+      background:color-mix(in srgb, var(--card) 78%, transparent);
+    }
+    .item .row{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline}
+    .title{font-weight:700}
+    .meta{color:var(--muted);font-size:12px}
+    .desc{margin:8px 0 0;color:var(--muted);font-size:13.5px;line-height:1.65}
+    .divider{height:1px;background:var(--soft);margin:18px 0}
+    .foot{
+      margin-top:26px;color:var(--muted);font-size:12px;
+      display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap
+    }
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+    .mini{font-size:12px}
+    .kbd{
+      font-size:12px;border:1px solid var(--line);padding:3px 8px;border-radius:8px;color:var(--muted)
+    }
   </style>
 </head>
+
 <body>
-<p class="p1">&lt;!doctype html&gt;</p>
-<p class="p1">&lt;html lang="zh-CN"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;宁波｜个人品牌&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="宁波：影视项目宣发 / 品牌合作 / 整合传播。精选项目与合作方式。" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="color-scheme" content="light dark" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>:root{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--bg:#0b0d10;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--card:#101319;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--text:#eef2f7;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--muted:#aab3c2;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--line:rgba(255,255,255,.10);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--soft:rgba(255,255,255,.06);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--accent:#8fb2ff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--shadow: 0 12px 40px rgba(0,0,0,.35);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--radius:18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--max:980px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>@media (prefers-color-scheme: light){</p>
-<p class="p1"><span class="Apple-converted-space">      </span>:root{</p>
-<p class="p1"><span class="Apple-converted-space">        </span>--bg:#f6f7f9;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>--card:#ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>--text:#0b0d10;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>--muted:#5a6577;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>--line:rgba(10,15,20,.12);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>--soft:rgba(10,15,20,.06);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>--accent:#2a64ff;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>--shadow: 0 10px 30px rgba(10,15,20,.08);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>*{box-sizing:border-box}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>html,body{height:100%}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin:0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background:</p>
-<p class="p1"><span class="Apple-converted-space">        </span>radial-gradient(900px 600px at 20% 0%, rgba(143,178,255,.22), transparent 55%),</p>
-<p class="p1"><span class="Apple-converted-space">        </span>radial-gradient(800px 500px at 95% 18%, rgba(255,255,255,.08), transparent 55%),</p>
-<p class="p1"><span class="Apple-converted-space">        </span>var(--bg);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color:var(--text);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing:.2px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>a{color:inherit;text-decoration:none}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.wrap{max-width:var(--max);margin:0 auto;padding:26px 18px 70px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.topbar{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position:sticky;top:0;z-index:10;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>backdrop-filter: blur(10px);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: color-mix(in srgb, var(--bg) 86%, transparent);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-bottom:1px solid var(--soft);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding:12px 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: -26px -18px 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.brand{display:flex;align-items:center;gap:10px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.dot{width:10px;height:10px;border-radius:99px;background:var(--accent);box-shadow:0 0 0 6px color-mix(in srgb, var(--accent) 20%, transparent)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.name{font-weight:700}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav{display:flex;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:13px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav a{padding:8px 10px;border-radius:999px;border:1px solid transparent}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav a:hover{border-color:var(--line);background:color-mix(in srgb, var(--card) 65%, transparent)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero{padding:40px 0 24px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.kicker{color:var(--muted);font-size:13px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.pill{border:1px solid var(--line);background:color-mix(in srgb, var(--card) 78%, transparent);padding:7px 10px;border-radius:999px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>h1{margin:14px 0 12px;font-size:44px;line-height:1.08}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.lead{margin:0;color:var(--muted);max-width:68ch;line-height:1.75;font-size:15.5px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.cta{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:inline-flex;align-items:center;gap:10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding:11px 14px;border-radius:14px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid var(--line);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background:color-mix(in srgb, var(--card) 70%, transparent);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow:none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size:14px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn.primary{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-color: color-mix(in srgb, var(--accent) 55%, var(--line));</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(180deg,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>color-mix(in srgb, var(--accent) 18%, transparent),</p>
-<p class="p1"><span class="Apple-converted-space">        </span>color-mix(in srgb, var(--card) 75%, transparent)</p>
-<p class="p1"><span class="Apple-converted-space">      </span>);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn:hover{transform:translateY(-1px)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>grid-column:span 12;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background:color-mix(in srgb, var(--card) 86%, transparent);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid var(--line);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius:var(--radius);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding:16px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow:var(--shadow);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>@media(min-width:860px){</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.span6{grid-column:span 6}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.span4{grid-column:span 4}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.span8{grid-column:span 8}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card h2{margin:0 0 10px;font-size:14px;color:var(--muted);font-weight:650;letter-spacing:.6px;text-transform:uppercase}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.big{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size:16px;line-height:1.7;margin:0;color:var(--text);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.muted{color:var(--muted);line-height:1.7;margin:0}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.tag{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:7px 10px;border-radius:999px;background:color-mix(in srgb, var(--card) 75%, transparent)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.list{margin-top:10px;display:flex;flex-direction:column;gap:10px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.item{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding:12px;border:1px solid var(--line);border-radius:16px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background:color-mix(in srgb, var(--card) 78%, transparent);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.item .row{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.title{font-weight:700}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.meta{color:var(--muted);font-size:12px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.desc{margin:8px 0 0;color:var(--muted);font-size:13.5px;line-height:1.65}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.divider{height:1px;background:var(--soft);margin:18px 0}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.foot{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top:26px;color:var(--muted);font-size:12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.mini{font-size:12px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.kbd{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size:12px;border:1px solid var(--line);padding:3px 8px;border-radius:8px;color:var(--muted)</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="topbar"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="brand"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="dot"&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="name"&gt;宁波&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="mini muted"&gt;Portfolio&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="nav"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#about"&gt;关于&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#work"&gt;精选项目&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#services"&gt;合作方式&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#contact"&gt;联系&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="hero"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="kicker"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="pill"&gt;影视宣发 · 整合传播&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="pill"&gt;品牌合作 · 跨界联名&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="pill mono"&gt;Beijing / Remote&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h1&gt;把复杂项目做成&lt;br/&gt;可交付的结果&lt;/h1&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="lead"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>10年+内容与营销项目经验，覆盖电影与电视剧宣发、品牌整合传播与IP合作。</p>
-<p class="p1"><span class="Apple-converted-space">        </span>擅长节点规划、跨团队协作、资源协调与风险控制；工作风格偏克制、清晰、重交付。</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="cta"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a class="btn primary" href="#contact"&gt;联系我&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a class="btn" href="#work"&gt;查看项目&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a class="btn" href="resume.pdf" target="_blank" rel="noreferrer"&gt;简历 PDF&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="divider"&gt;&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card span6" id="about"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h2&gt;一句话定位&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="big"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>项目型内容负责人：既能做传播方案，也能把方案落到排期、资源和交付。</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="tags"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="tag"&gt;宣发统筹&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="tag"&gt;内容策略&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="tag"&gt;跨界合作&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="tag"&gt;供应商管理&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="tag"&gt;预算与排期&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card span6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h2&gt;近期关注&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="muted"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>更健康的工作节奏；更高质量的项目合作；也在持续把副业做成可持续的业务线。</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="divider"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="muted mini"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>小提示：你可以把项目做成“可验证”的三要素：&lt;span class="kbd"&gt;你负责什么&lt;/span&gt; &lt;span class="kbd"&gt;怎么推进&lt;/span&gt; &lt;span class="kbd"&gt;结果是什么&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="work" class="grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card span8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;精选项目&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="muted"&gt;先放 6–9 个“代表作”，其余项目可以放在“完整清单/附件简历”里。&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="list"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="title"&gt;电影｜长津湖&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="meta"&gt;宣发 / 整合传播&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="desc"&gt;补一句你做的核心：节点规划、物料体系、渠道协同、资源对齐；再补结果（若可公开）。&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="title"&gt;电影｜刺杀小说家 1&amp;2&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="meta"&gt;品牌合作 / 内容物料&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="desc"&gt;补一句你的职责范围、合作方、落地形式；突出你推动的关键决策与执行闭环。&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="title"&gt;电视剧｜叛逆者&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="meta"&gt;项目统筹&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="desc"&gt;补一句：你负责的周期与关键节点；跨团队协作怎么设计；风险点如何提前处理。&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="title"&gt;电视剧｜与凤行&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="meta"&gt;宣发 / 合作推进&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="desc"&gt;补一句：你推动的核心动作；交付物是什么；外部合作怎么拉齐资源。&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card span4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;项目清单结构&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="muted"&gt;建议分三类，信息更干净。&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="list"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="title"&gt;电影&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="meta"&gt;代表作优先&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="desc"&gt;例如：罗马、芳华、南方车站的聚会、坚如磐石等（按你真实清单替换）。&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="title"&gt;电视剧&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="meta"&gt;主推项目&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="desc"&gt;例如：叛逆者、与凤行、除恶、年少有为等。&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="title"&gt;广告 / 联名&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="meta"&gt;跨界亮点&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="desc"&gt;例如：华硕、吐槽大会、腾讯新闻大开眼界、王者荣耀剧本杀、小马宝莉×万达等。&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="services" class="grid" style="margin-top:14px"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card span4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;合作方式 01&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="big"&gt;传播方案与节点规划&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="muted"&gt;定位、主张、内容矩阵、节点排期、预算拆解、复盘框架。&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card span4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;合作方式 02&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="big"&gt;执行统筹与交付管理&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="muted"&gt;资源协调、供应商管理、风险预案、跨团队同步机制。&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card span4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;合作方式 03&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="big"&gt;品牌合作与跨界联名&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="muted"&gt;权益包、合作路径、落地形式、内容创意与对外沟通推进。&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="contact" class="grid" style="margin-top:14px"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card span6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;联系&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="muted"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>邮箱：&lt;span class="mono"&gt;yourname@email.com&lt;/span&gt;&lt;br/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>微信：&lt;span class="mono"&gt;your-wechat&lt;/span&gt;&lt;br/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>作品/社媒：&lt;span class="mono"&gt;douyin / weibo / behance&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="cta" style="margin-top:12px"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="btn primary" href="mailto:yourname@email.com"&gt;发邮件&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="btn" href="#" onclick="navigator.clipboard.writeText(location.href);alert('已复制网站链接');return false;"&gt;复制网址&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card span6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;下载&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="muted"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>把简历 PDF 放到同目录，命名为 &lt;span class="mono"&gt;resume.pdf&lt;/span&gt;。</p>
-<p class="p1"><span class="Apple-converted-space">          </span>如需“完整项目清单”，可以再放一个 &lt;span class="mono"&gt;projects.pdf&lt;/span&gt;。</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="cta" style="margin-top:12px"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="btn" href="projects.pdf" target="_blank" rel="noreferrer"&gt;完整项目清单&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="btn" href="#" onclick="window.print();return false;"&gt;打印/导出&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="foot"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;© &lt;span id="y"&gt;&lt;/span&gt; 宁波&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="mono"&gt;neson2000.github.io&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('y').textContent = new Date().getFullYear();</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <span class="dot"></span>
+        <div class="name">宁波</div>
+        <div class="mini muted">Portfolio</div>
+      </div>
+      <div class="nav">
+        <a href="#about">关于</a>
+        <a href="#work">精选项目</a>
+        <a href="#services">合作方式</a>
+        <a href="#contact">联系</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="kicker">
+        <span class="pill">影视宣发 · 整合传播</span>
+        <span class="pill">品牌合作 · 跨界联名</span>
+        <span class="pill mono">Beijing / Remote</span>
+      </div>
+
+      <h1>把复杂项目做成<br/>可交付的结果</h1>
+
+      <p class="lead">
+        10年+内容与营销项目经验，覆盖电影与电视剧宣发、品牌整合传播与IP合作。
+        擅长节点规划、跨团队协作、资源协调与风险控制；工作风格偏克制、清晰、重交付。
+      </p>
+
+      <div class="cta">
+        <a class="btn primary" href="#contact">联系我</a>
+        <a class="btn" href="#work">查看项目</a>
+        <a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">简历 PDF</a>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="grid">
+        <div class="card span6" id="about">
+          <h2>一句话定位</h2>
+          <p class="big">
+            项目型内容负责人：既能做传播方案，也能把方案落到排期、资源和交付。
+          </p>
+          <div class="tags">
+            <span class="tag">宣发统筹</span>
+            <span class="tag">内容策略</span>
+            <span class="tag">跨界合作</span>
+            <span class="tag">供应商管理</span>
+            <span class="tag">预算与排期</span>
+          </div>
+        </div>
+
+        <div class="card span6">
+          <h2>近期关注</h2>
+          <p class="muted">
+            更健康的工作节奏；更高质量的项目合作；也在持续把副业做成可持续的业务线。
+          </p>
+          <div class="divider"></div>
+          <p class="muted mini">
+            小提示：你可以把项目做成“可验证”的三要素：<span class="kbd">你负责什么</span> <span class="kbd">怎么推进</span> <span class="kbd">结果是什么</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="grid">
+      <div class="card span8">
+        <h2>精选项目</h2>
+        <p class="muted">先放 6–9 个“代表作”，其余项目可以放在“完整清单/附件简历”里。</p>
+
+        <div class="list">
+          <div class="item">
+            <div class="row">
+              <div class="title">电影｜长津湖</div>
+              <div class="meta">宣发 / 整合传播</div>
+            </div>
+            <p class="desc">补一句你做的核心：节点规划、物料体系、渠道协同、资源对齐；再补结果（若可公开）。</p>
+          </div>
+
+          <div class="item">
+            <div class="row">
+              <div class="title">电影｜刺杀小说家 1&2</div>
+              <div class="meta">品牌合作 / 内容物料</div>
+            </div>
+            <p class="desc">补一句你的职责范围、合作方、落地形式；突出你推动的关键决策与执行闭环。</p>
+          </div>
+
+          <div class="item">
+            <div class="row">
+              <div class="title">电视剧｜叛逆者</div>
+              <div class="meta">项目统筹</div>
+            </div>
+            <p class="desc">补一句：你负责的周期与关键节点；跨团队协作怎么设计；风险点如何提前处理。</p>
+          </div>
+
+          <div class="item">
+            <div class="row">
+              <div class="title">电视剧｜与凤行</div>
+              <div class="meta">宣发 / 合作推进</div>
+            </div>
+            <p class="desc">补一句：你推动的核心动作；交付物是什么；外部合作怎么拉齐资源。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card span4">
+        <h2>项目清单结构</h2>
+        <p class="muted">建议分三类，信息更干净。</p>
+        <div class="list">
+          <div class="item">
+            <div class="row">
+              <div class="title">电影</div>
+              <div class="meta">代表作优先</div>
+            </div>
+            <p class="desc">例如：罗马、芳华、南方车站的聚会、坚如磐石等（按你真实清单替换）。</p>
+          </div>
+          <div class="item">
+            <div class="row">
+              <div class="title">电视剧</div>
+              <div class="meta">主推项目</div>
+            </div>
+            <p class="desc">例如：叛逆者、与凤行、除恶、年少有为等。</p>
+          </div>
+          <div class="item">
+            <div class="row">
+              <div class="title">广告 / 联名</div>
+              <div class="meta">跨界亮点</div>
+            </div>
+            <p class="desc">例如：华硕、吐槽大会、腾讯新闻大开眼界、王者荣耀剧本杀、小马宝莉×万达等。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="grid" style="margin-top:14px">
+      <div class="card span4">
+        <h2>合作方式 01</h2>
+        <p class="big">传播方案与节点规划</p>
+        <p class="muted">定位、主张、内容矩阵、节点排期、预算拆解、复盘框架。</p>
+      </div>
+      <div class="card span4">
+        <h2>合作方式 02</h2>
+        <p class="big">执行统筹与交付管理</p>
+        <p class="muted">资源协调、供应商管理、风险预案、跨团队同步机制。</p>
+      </div>
+      <div class="card span4">
+        <h2>合作方式 03</h2>
+        <p class="big">品牌合作与跨界联名</p>
+        <p class="muted">权益包、合作路径、落地形式、内容创意与对外沟通推进。</p>
+      </div>
+    </section>
+
+    <section id="contact" class="grid" style="margin-top:14px">
+      <div class="card span6">
+        <h2>联系</h2>
+        <p class="muted">
+          邮箱：<span class="mono">yourname@email.com</span><br/>
+          微信：<span class="mono">your-wechat</span><br/>
+          作品/社媒：<span class="mono">douyin / weibo / behance</span>
+        </p>
+        <div class="cta" style="margin-top:12px">
+          <a class="btn primary" href="mailto:yourname@email.com">发邮件</a>
+          <a class="btn" href="#" onclick="navigator.clipboard.writeText(location.href);alert('已复制网站链接');return false;">复制网址</a>
+        </div>
+      </div>
+
+      <div class="card span6">
+        <h2>下载</h2>
+        <p class="muted">
+          把简历 PDF 放到同目录，命名为 <span class="mono">resume.pdf</span>。
+          如需“完整项目清单”，可以再放一个 <span class="mono">projects.pdf</span>。
+        </p>
+        <div class="cta" style="margin-top:12px">
+          <a class="btn" href="projects.pdf" target="_blank" rel="noreferrer">完整项目清单</a>
+          <a class="btn" href="#" onclick="window.print();return false;">打印/导出</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="foot">
+      <div>© <span id="y"></span> 宁波</div>
+      <div class="mono">neson2000.github.io</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
